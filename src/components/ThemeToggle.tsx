@@ -1,7 +1,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/contexts/ThemeContext";
-import { sun, moon } from "lucide-react";
+import { Sun, Moon } from "lucide-react";
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
@@ -19,9 +19,9 @@ const ThemeToggle = () => {
       size="icon"
     >
       {theme === 'neobrutalist' ? (
-        <sun className="h-6 w-6" />
+        <Sun className="h-6 w-6" />
       ) : (
-        <moon className="h-6 w-6" />
+        <Moon className="h-6 w-6" />
       )}
     </Button>
   );
