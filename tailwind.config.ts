@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -61,7 +62,14 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				// Neobrutalist colors
+				'neo-blue': '#0066FF',
+				'neo-yellow': '#FFFF00',
+				'neo-pink': '#FF006B',
+				'neo-green': '#00FF66',
+				'neo-orange': '#FF6600',
+				'neo-purple': '#6600FF',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +92,42 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'bounce-in': {
+					'0%': {
+						transform: 'scale(0.95)',
+						opacity: '0'
+					},
+					'50%': {
+						transform: 'scale(1.05)'
+					},
+					'100%': {
+						transform: 'scale(1)',
+						opacity: '1'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						transform: 'translateY(20px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'bounce-in': 'bounce-in 0.6s ease-out',
+				'slide-up': 'slide-up 0.5s ease-out'
+			},
+			boxShadow: {
+				'neo': '8px 8px 0px 0px #000000',
+				'neo-lg': '12px 12px 0px 0px #000000',
+				'neo-xl': '16px 16px 0px 0px #000000',
+				'neo-colored': '8px 8px 0px 0px',
 			}
 		}
 	},
