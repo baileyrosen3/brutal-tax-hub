@@ -41,47 +41,32 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
   .dark {
     --background: 222.2 84% 4.9%;
     --foreground: 210 40% 98%;
-
     --card: 222.2 84% 4.9%;
     --card-foreground: 210 40% 98%;
-
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
-
     --primary: 210 40% 98%;
     --primary-foreground: 222.2 47.4% 11.2%;
-
     --secondary: 217.2 32.6% 17.5%;
     --secondary-foreground: 210 40% 98%;
-
     --muted: 217.2 32.6% 17.5%;
     --muted-foreground: 215 20.2% 65.1%;
-
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
-
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
-
     --border: 217.2 32.6% 17.5%;
     --input: 217.2 32.6% 17.5%;
     --ring: 212.7 26.8% 83.9%;
@@ -94,6 +79,18 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
+
+  /* Professional Theme Variables */
+  [data-theme="professional"] {
+    --professional-navy: 220 30% 15%;
+    --professional-navy-light: 220 25% 25%;
+    --professional-blue: 215 45% 45%;
+    --professional-green: 145 35% 35%;
+    --professional-gold: 45 85% 55%;
+    --professional-gray: 210 10% 45%;
+    --professional-gray-light: 210 10% 95%;
+    --professional-white: 0 0% 100%;
+  }
 }
 
 @layer base {
@@ -103,6 +100,39 @@
 
   body {
     @apply bg-background text-foreground font-sans;
+  }
+
+  /* Professional theme styles */
+  [data-theme="professional"] body {
+    @apply bg-slate-50 text-slate-800;
+  }
+
+  [data-theme="professional"] .professional-card {
+    @apply bg-white shadow-lg border border-slate-200 rounded-lg;
+  }
+
+  [data-theme="professional"] .professional-btn {
+    @apply bg-slate-800 text-white px-6 py-3 rounded-md font-medium transition-all hover:bg-slate-700 shadow-md;
+  }
+
+  [data-theme="professional"] .professional-btn-outline {
+    @apply border-2 border-slate-800 text-slate-800 px-6 py-3 rounded-md font-medium transition-all hover:bg-slate-800 hover:text-white;
+  }
+
+  [data-theme="professional"] .professional-header {
+    @apply bg-white shadow-md border-b border-slate-200;
+  }
+
+  [data-theme="professional"] .professional-text-primary {
+    @apply text-slate-800;
+  }
+
+  [data-theme="professional"] .professional-text-secondary {
+    @apply text-slate-600;
+  }
+
+  [data-theme="professional"] .professional-accent {
+    @apply text-blue-600;
   }
 }
 
@@ -137,5 +167,30 @@
 
   .neo-card {
     @apply neo-border neo-shadow bg-white p-6;
+  }
+
+  /* Theme-aware utilities */
+  .theme-card {
+    @apply neo-card;
+  }
+
+  [data-theme="professional"] .theme-card {
+    @apply professional-card;
+  }
+
+  .theme-btn {
+    @apply neo-btn;
+  }
+
+  [data-theme="professional"] .theme-btn {
+    @apply professional-btn;
+  }
+
+  .theme-header {
+    @apply bg-white neo-border border-t-0 border-l-0 border-r-0 neo-shadow;
+  }
+
+  [data-theme="professional"] .theme-header {
+    @apply professional-header;
   }
 }
