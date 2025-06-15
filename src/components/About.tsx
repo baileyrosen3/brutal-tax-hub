@@ -1,10 +1,7 @@
 
 import { Award, BookOpen, Users, Clock } from "lucide-react";
-import { useTheme } from "@/contexts/ThemeContext";
 
 const About = () => {
-  const { theme } = useTheme();
-
   const credentials = [
     {
       icon: Award,
@@ -29,94 +26,48 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className={`py-20 ${
-      theme === 'neobrutalist' 
-        ? 'bg-gradient-to-br from-gray-50 to-white' 
-        : 'bg-white'
-    }`}>
+    <section id="about" className="py-20 bg-gradient-to-br from-gray-50 to-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Left Column - Content */}
           <div>
-            <div className={`inline-block px-6 py-3 text-sm uppercase tracking-wider mb-6 ${
-              theme === 'neobrutalist' 
-                ? 'bg-neo-green text-black font-mono neo-border neo-shadow' 
-                : 'bg-green-100 text-green-800 font-medium rounded-full'
-            }`}>
+            <div className="inline-block bg-neo-green text-black px-6 py-3 font-mono text-sm uppercase tracking-wider mb-6 neo-border neo-shadow">
               👨‍💼 ABOUT ME
             </div>
             
-            <h2 className={`mb-6 ${
-              theme === 'neobrutalist' 
-                ? 'font-display font-black text-4xl md:text-5xl' 
-                : 'font-bold text-4xl md:text-5xl text-slate-900'
-            }`}>
-              {theme === 'neobrutalist' ? (
-                <>
-                  YOUR TRUSTED
-                  <span className="bg-neo-yellow text-black px-3 py-1 neo-border neo-shadow inline-block transform -rotate-1 mx-3">
-                    TAX EXPERT
-                  </span>
-                </>
-              ) : (
-                <>
-                  Your Trusted <span className="text-blue-600">Tax Expert</span>
-                </>
-              )}
+            <h2 className="font-display font-black text-4xl md:text-5xl mb-6">
+              YOUR TRUSTED
+              <span className="bg-neo-yellow text-black px-3 py-1 neo-border neo-shadow inline-block transform -rotate-1 mx-3">
+                TAX EXPERT
+              </span>
             </h2>
             
-            <p className={`text-lg mb-6 ${
-              theme === 'neobrutalist' ? '' : 'text-slate-600'
-            }`}>
+            <p className="text-lg mb-6">
               Hi, I'm <strong>Alex Johnson</strong>, a certified tax professional dedicated to helping individuals and small businesses navigate the complex world of taxes. With over a decade of experience, I've helped hundreds of clients maximize their refunds and minimize their tax burden.
             </p>
             
-            <p className={`text-lg mb-8 ${
-              theme === 'neobrutalist' ? '' : 'text-slate-600'
-            }`}>
+            <p className="text-lg mb-8">
               My approach is simple: <strong>personalized service</strong>, <strong>maximum accuracy</strong>, and <strong>year-round support</strong>. I stay up-to-date with the latest tax laws and regulations to ensure you get every deduction and credit you deserve.
             </p>
 
             {/* Why Choose Me */}
-            <div className={`p-6 mb-8 text-white ${
-              theme === 'neobrutalist' 
-                ? 'neo-card bg-neo-blue' 
-                : 'bg-slate-800 rounded-xl shadow-lg'
-            }`}>
-              <h3 className={`text-xl mb-4 ${
-                theme === 'neobrutalist' ? 'font-display font-bold' : 'font-bold'
-              }`}>WHY CHOOSE ME?</h3>
+            <div className="neo-card bg-neo-blue text-white p-6 mb-8">
+              <h3 className="font-display font-bold text-xl mb-4">WHY CHOOSE ME?</h3>
               <ul className="space-y-3">
                 <li className="flex items-start space-x-3">
-                  <span className={`px-2 py-1 font-bold text-sm ${
-                    theme === 'neobrutalist' 
-                      ? 'bg-neo-yellow text-black' 
-                      : 'bg-green-500 text-white rounded'
-                  }`}>✓</span>
+                  <span className="bg-neo-yellow text-black px-2 py-1 font-bold text-sm">✓</span>
                   <span>Personal attention to every return - no cookie-cutter approach</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className={`px-2 py-1 font-bold text-sm ${
-                    theme === 'neobrutalist' 
-                      ? 'bg-neo-yellow text-black' 
-                      : 'bg-green-500 text-white rounded'
-                  }`}>✓</span>
+                  <span className="bg-neo-yellow text-black px-2 py-1 font-bold text-sm">✓</span>
                   <span>Guaranteed accuracy with audit support included</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className={`px-2 py-1 font-bold text-sm ${
-                    theme === 'neobrutalist' 
-                      ? 'bg-neo-yellow text-black' 
-                      : 'bg-green-500 text-white rounded'
-                  }`}>✓</span>
+                  <span className="bg-neo-yellow text-black px-2 py-1 font-bold text-sm">✓</span>
                   <span>Fast turnaround - most returns completed within 48 hours</span>
                 </li>
                 <li className="flex items-start space-x-3">
-                  <span className={`px-2 py-1 font-bold text-sm ${
-                    theme === 'neobrutalist' 
-                      ? 'bg-neo-yellow text-black' 
-                      : 'bg-green-500 text-white rounded'
-                  }`}>✓</span>
+                  <span className="bg-neo-yellow text-black px-2 py-1 font-bold text-sm">✓</span>
                   <span>Transparent pricing with no hidden fees</span>
                 </li>
               </ul>
@@ -128,29 +79,17 @@ const About = () => {
             {credentials.map((credential, index) => (
               <div 
                 key={index}
-                className={`transition-all duration-300 ${
-                  theme === 'neobrutalist' 
-                    ? 'neo-card hover:transform hover:translate-x-2 bg-white' 
-                    : 'bg-white shadow-lg rounded-xl border border-slate-200 p-6 hover:shadow-xl hover:translate-x-2'
-                }`}
+                className="neo-card hover:transform hover:translate-x-2 transition-all duration-300 bg-white"
               >
                 <div className="flex items-start space-x-4">
-                  <div className={`p-3 flex-shrink-0 ${
-                    theme === 'neobrutalist' 
-                      ? 'bg-neo-pink text-white neo-border neo-shadow' 
-                      : 'bg-blue-100 text-blue-600 rounded-lg'
-                  }`}>
+                  <div className="bg-neo-pink text-white p-3 neo-border neo-shadow flex-shrink-0">
                     <credential.icon className="h-8 w-8" />
                   </div>
                   <div>
-                    <h3 className={`text-lg mb-2 ${
-                      theme === 'neobrutalist' 
-                        ? 'font-display font-bold' 
-                        : 'font-bold text-slate-900'
-                    }`}>
+                    <h3 className="font-display font-bold text-lg mb-2">
                       {credential.title}
                     </h3>
-                    <p className={theme === 'neobrutalist' ? 'text-gray-600' : 'text-slate-600'}>
+                    <p className="text-gray-600">
                       {credential.description}
                     </p>
                   </div>
@@ -159,26 +98,14 @@ const About = () => {
             ))}
 
             {/* Additional Info Card */}
-            <div className={`p-6 ${
-              theme === 'neobrutalist' 
-                ? 'neo-card bg-gradient-to-br from-neo-yellow to-neo-orange' 
-                : 'bg-gradient-to-br from-blue-50 to-green-50 rounded-xl border border-slate-200'
-            }`}>
-              <h3 className={`text-xl mb-4 ${
-                theme === 'neobrutalist' 
-                  ? 'font-display font-black' 
-                  : 'font-bold text-slate-900'
-              }`}>
+            <div className="neo-card bg-gradient-to-br from-neo-yellow to-neo-orange p-6">
+              <h3 className="font-display font-black text-xl mb-4">
                 📍 SERVING THE LOCAL COMMUNITY
               </h3>
-              <p className={`font-medium mb-4 ${
-                theme === 'neobrutalist' ? '' : 'text-slate-700'
-              }`}>
+              <p className="font-medium mb-4">
                 Based in <strong>Downtown</strong>, serving clients throughout the metro area with both in-person and virtual services.
               </p>
-              <div className={`grid grid-cols-2 gap-4 text-sm ${
-                theme === 'neobrutalist' ? 'font-mono' : 'font-medium text-slate-600'
-              }`}>
+              <div className="grid grid-cols-2 gap-4 text-sm font-mono">
                 <div>
                   <div className="font-bold">OFFICE HOURS:</div>
                   <div>Mon-Fri 9AM-6PM</div>

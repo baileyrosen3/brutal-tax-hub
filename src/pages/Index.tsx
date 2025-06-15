@@ -6,7 +6,6 @@ import About from "@/components/About";
 import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
-import ThemeToggle from "@/components/ThemeToggle";
 
 const Index = () => {
   return (
@@ -18,7 +17,6 @@ const Index = () => {
       <Testimonials />
       <Contact />
       <Footer />
-      <ThemeToggle />
     </div>
   );
 };

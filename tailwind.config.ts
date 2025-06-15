@@ -115,54 +115,19 @@ export default {
 						transform: 'translateY(0)',
 						opacity: '1'
 					}
-				},
-				'fadeInUp': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(30px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
-				},
-				'slideInRight': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateX(50px)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateX(0)'
-					}
-				},
-				'float': {
-					'0%, 100%': { transform: 'translateY(0px)' },
-					'50%': { transform: 'translateY(-20px)' }
-				},
-				'shimmer': {
-					'0%': { left: '-100%' },
-					'100%': { left: '100%' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
 				'bounce-in': 'bounce-in 0.6s ease-out',
-				'slide-up': 'slide-up 0.5s ease-out',
-				'fadeInUp': 'fadeInUp 0.6s ease-out',
-				'slideInRight': 'slideInRight 0.6s ease-out',
-				'float': 'float 6s ease-in-out infinite',
-				'shimmer': 'shimmer 3s infinite'
+				'slide-up': 'slide-up 0.5s ease-out'
 			},
 			boxShadow: {
 				'neo': '8px 8px 0px 0px #000000',
 				'neo-lg': '12px 12px 0px 0px #000000',
 				'neo-xl': '16px 16px 0px 0px #000000',
 				'neo-colored': '8px 8px 0px 0px',
-				'professional': '0 10px 30px -10px rgba(0, 0, 0, 0.1)',
-				'professional-lg': '0 20px 40px -12px rgba(0, 0, 0, 0.15)',
-				'professional-xl': '0 25px 50px -12px rgba(0, 0, 0, 0.25)'
 			}
 		}
 	},
