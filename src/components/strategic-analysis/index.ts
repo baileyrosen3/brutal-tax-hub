@@ -1,0 +1,11 @@
+export { default as HeroSection } from "./HeroSection";
+export { default as ExecutiveSummarySection } from "./ExecutiveSummarySection";
+export { default as MarketOpportunitySection } from "./MarketOpportunitySection";
+export { default as DigitalConciergeSection } from "./DigitalConciergeSection";
+export { default as KeyDifferentiatorsSection } from "./KeyDifferentiatorsSection";
+export { default as GoToMarketSection } from "./GoToMarketSection";
+export { default as TargetAudienceSection } from "./TargetAudienceSection";
+export { default as CompetitiveLandscapeSection } from "./CompetitiveLandscapeSection";
+export { default as StrategicMarketOpportunitySection } from "./StrategicMarketOpportunitySection";
+export { default as PartnershipOpportunitiesSection } from "./PartnershipOpportunitiesSection";
+export { default as ContactSection } from "./ContactSection";
