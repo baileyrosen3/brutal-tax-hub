@@ -39,7 +39,7 @@ const FeatureCard = ({
 
 const Features = () => {
   return (
-    <section id="features" className="py-20 bg-gray-900">
+    <section id="features" className="bg-gray-50 py-20">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center text-gray-800 mb-12">
           Why Golf Software Agency?

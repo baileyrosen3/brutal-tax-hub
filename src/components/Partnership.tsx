@@ -1,8 +1,6 @@
-import React from "react";
-
 const Partnership = () => {
   return (
-    <section id="strategy" className="py-20 bg-gray-800">
+    <section id="partnership" className="bg-white py-20">
       <div className="container mx-auto px-6">
         <div className="md:flex md:items-center">
           <div className="md:w-1/2">

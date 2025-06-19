@@ -1,8 +1,6 @@
-import React from "react";
-
 const Positioning = () => {
   return (
-    <section className="bg-blue-600 text-white py-16">
+    <div className="bg-white py-12">
       <div className="container mx-auto text-center px-6">
         <h2 className="text-4xl font-bold mb-4">
           A New Standard in Club Management
@@ -14,7 +12,7 @@ const Positioning = () => {
           elegant, AI-powered solution.
         </p>
       </div>
-    </section>
+    </div>
   );
 };
 
