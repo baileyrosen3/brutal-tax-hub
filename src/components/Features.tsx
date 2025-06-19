@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import React from "react";
 
 // Placeholder icons - we can replace these with actual icons later
 const FeatureIcon = ({ children }: { children: ReactNode }) => (
